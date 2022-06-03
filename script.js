@@ -8,6 +8,7 @@
     clicker.addEventListener("click", ()=>{
         counter ++;
         puntos.innerHTML = "Puntos: "+counter;
+        console.log("hola");
     });
    
 })();
