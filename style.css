@@ -1,9 +1,19 @@
+.banderolle{
+  width: 100%;
+  margin-top: 0px;
+}
+
 body {
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.bodypart{
     width:80%;
+    margin-top: 0;
     margin-left:auto;
     margin-right:auto;
     text-align: center;
-    align-items: center;
   }
    .round{
     font-size: 12px;
@@ -49,12 +59,23 @@ body {
     display: flex;
     white-space: nowrap;
     overflow: hidden;
+
+
+
   }
   
   .loop-holder__text {
+      display: flex;
+
       animation: textLoop 10s linear infinite;
       font-size: 6vw;
-      padding-right: .35em;
+      text-indent: .55em;
+      padding-right: .55em;
+      align-self: auto;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      color: white;
+      background-color: black;
   }
   
   
