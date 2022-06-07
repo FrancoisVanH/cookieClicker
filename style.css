@@ -1,3 +1,12 @@
+@font-face {
+  font-family: "Smiley-Cookie";
+  src: url(./font/Smiley-Click.otf);
+}
+@font-face {
+   font-family: "Grotesk";
+  src:url(./font/MonumentGrotesk-Mono.ttf);
+}
+
 .banderolle{
   width: 100%;
   margin-top: 0px;
@@ -24,7 +33,7 @@ body {
     text-align: center;
 
   }
-
+/* container de l'image - gere l'espace */
 .IMG-SPACE{
 display: block;
 margin: auto;
@@ -33,40 +42,68 @@ margin-bottom: 30px;
 text-align: center;
 padding:30px;
 }
+/* container de l'image - gere l'espace */
 
 
-  .img-click{
-  box-shadow: 4px 4px 0 0 #000000;
+/* shadow de l'image */
+.img-click{
+box-shadow: 4px 4px 0 0 #000000;
  transition: ease all .1s;
  border-radius: 50%;  
- max-width: 60%;
+ max-width: 70%;
  background-color: #000000;
   }
-
   .img-click:active{
   transform: translateY(4px) translateX(4px);
   box-shadow: 0px 0px 0 0 #000000;
   }
+ /* shadow de l'image */
 
 
 
 
+/* button du shop */
+h4 {
+  text-align: center;
+  font-family: "Grotesk";
+}
+.container-btn{
+  margin-left: 1.4em;
+  margin-right: 1.4em;
+  margin-bottom: 2em;
+}
+
+.button1{
+  display: flex;
+  flex-basis: 30%;
+  padding-bottom: 1.5em;
+
+}
+.button2{
+  display: flex;
+  padding-bottom: 1.5em;
+
+
+}
+.button3{
+  display: flex;
+
+}
 
 
 .round{
-    flex:1;
-    margin: 0 auto;
-    font-size: 0.5em;
+    font-family: "Grotesk";
+    flex: 1;
+    font-size: 0.8em;
     color: #000000;
     line-height: 1.5;
     font-weight: bold;
-    padding: 1.2em 2em;
+    padding: 10px 10px;
     background: #FFFFFF;
     box-shadow: 4px 4px 0 0 #000000;
     border-radius: 200px ;
     outline:0;
     transition: ease all .1s;
-    display:flex;
   } 
 
 
@@ -77,6 +114,7 @@ padding:30px;
   .round:hover {
     background: #d3d3d3;
   }
+  /* buttons du shop */
   
   .settings {
     font-size: 2px;
@@ -109,14 +147,14 @@ padding:30px;
   .loop-holder__text {
       display: flex;
       animation: textLoop 10s linear infinite;
-      font-size: 11vw;
+      font-size: 13vw;
       text-indent: .55em;
-      padding-right: .55em;
       align-self: auto;
-      padding-top: 10px;
-      padding-bottom: 10px;
+      padding-top: 17px;
+      padding-bottom: 1px;
       color: white;
       background-color: black;
+      font-family: "Smiley-Cookie";
   }
   
   
