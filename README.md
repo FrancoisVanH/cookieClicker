@@ -1,6 +1,6 @@
 # READ ME! 
 
-- Repository: `cookClicker`
+- Repository: `cookieClicker`
 - Type of Challenge: `Consolidation`
 - Duration: `4 days`
 - Deadline: `28/11/21 17PM`
