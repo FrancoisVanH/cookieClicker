@@ -33,3 +33,10 @@ Create a Cookie Clicker game with the following **features** :
 8.  Increase the cost, you need to pay more if you want more.
 9.  Price of the upgrades.
 10. Auto-clicker.
+
+## Design & Figma
+
+![Base](https://user-images.githubusercontent.com/104204619/172336083-ced83fa9-cc47-411d-901b-e6d691a1d5b5.png)
+![FullBonus](https://user-images.githubusercontent.com/104204619/172336104-b27bbdf5-5704-485f-8f64-7c85c7d59c75.png)
+![FullScreen](https://user-images.githubusercontent.com/104204619/172336133-3f19ec4e-b4d9-4e4d-8943-ae61dff7f257.png)
+
