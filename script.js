@@ -18,9 +18,12 @@
     const delai = 1000;
     var autoClickPerSecond = 1;
     var interval = null;
+
     var boostActive = false;
     var boost = 1;
-    var multiplicateur = 1;
+    var now = 30;
+ 
+    var multipl = 1;
 
     ///////////////////////////////////////////////////// Functions //////////////////////////////////////////////////////
     //Update Texts functions
@@ -30,7 +33,7 @@
     }
     //Update Current click text (current active multiplier bonus + current active autoclick bonus)
     function updateClickText(){
-        clickText.innerHTML = "Puntos per click: "+ 1 + " | AutoPuntos: " + autoClickPerSecond + "/sec"
+        clickText.innerHTML = "Puntos per click: "+ multipl + " | AutoPuntos: " + autoClickPerSecond + "/sec"
     }
     //Update the text of a button (Called when cost of a bonus changed)
     function updateBtnText(btn, text){
@@ -47,12 +50,17 @@
             boost = 1;
         }
 
-        counter = counter + ((1 * multiplicateur)* boost);
+        counter = counter + ((1 * multipl)* boost);
         updatePuntosText();
     }
     //Update cost of a bonus button (Called when user bought a bonus)
     function updateBonusCost(bonusCost, incrementation){
         return bonusCost * incrementation;
+    }
+    // multiplicateur basique en X2
+    function multiplicateur()
+    {
+        multipl *= 2;
     }
 
     ///////////////////////////////////////////////////// Code //////////////////////////////////////////////////////
@@ -96,56 +104,56 @@
         }
     });
 
+    //Boost Bonus
+    boostBonusBtn.addEventListener("click", ()=>{
+        // Check if the user have enough score to buy the bonus
+        if(counter >= boostBonusCost && !boostActive){
+            //Decrease the score by the bonus cost
+            counter -= boostBonusCost;
+            updatePuntosText();
+            //change boostActive on
+            boostActive = true;
 
+            //Increase the bonus cost and update the bonus button text
+            boostBonusCost = updateBonusCost(boostBonusCost, 2);
+            updateBtnText(boostBonusBtn, "frenzy: "+boostBonusCost+" | X200%/30sec");
 
-        //Boost Bonus
-        boostBonusBtn.addEventListener("click", ()=>{
-            // Check if the user have enough score to buy the bonus
-            if(counter >= boostBonusCost && !boostActive){
-                //Decrease the score by the bonus cost
-                counter -= boostBonusCost;
-                updatePuntosText();
-                //change boostActive on
-                boostActive = true;
-
-
-            //Variable for timer 30s    
-            var now = 30;
-
-             //Increase the bonus cost and update the bonus button text
-             boostBonusCost = updateBonusCost(boostBonusCost, 2);
-             updateBtnText(boostBonusBtn, "frenzy: "+boostBonusCost+" | X200%/30sec");
-       
             //Set boost
             var intervalBoost = setInterval(()=>{
-                        
-                for(let j = 0; j < autoClickPerSecond; j++){
-                       
-                    updatePuntosText();
-                    now--;
 
+              for(let j = 0; j < autoClickPerSecond; j++){
 
-                    //Change text timer
-                    textTimer.innerHTML = "Frenzy timer: "+now+"s";
-                    
-                                    
-                    //stop interval after 30s
-                    if(now<=0){
-                    clearInterval(intervalBoost);
-                    boostActive = false;
-                    }
-                                                           
+                updatePuntosText();
+                now--;
+
+                //Change text timer
+                textTimer.innerHTML = "Frenzy timer: "+now+"s";
+
+                //stop interval after 30s
+                if(now<=0){
+                clearInterval(intervalBoost);
+                boostActive = false;
                 }
-                }, delai);
-                 
-            }
-                   
-            else{
-                console.log("not enough score");
-            }
 
-        });
+              }
+            }, delai);
+        }
+        else{
+            console.log("not enough score");
+        }
+    });
 
+    //Multiplier Bonus
+    multiplierBonusBtn.addEventListener("click", ()=>{
 
-
+        if(counter >= multiplierBonusCost)
+        {
+            counter -= multiplierBonusCost;
+            updatePuntosText();
+            multiplicateur();
+            multiplierBonusCost = updateBonusCost(multiplierBonusCost, 2);
+            updateBtnText(multiplierBonusBtn, "click harder: " + multiplierBonusCost);
+            updateClickText();
+        }
+    })
 })();
