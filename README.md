@@ -6,7 +6,7 @@
 - Deadline: `28/11/21 17PM`
 - Deployment strategy :
   - Github page
-- Team challenge : In groups of three
+- Team challenge : In group of three
   - frontend: Timur & François
   - backend: Arianna, Anthony & Arnaud
   - project management : François & Arnaud
