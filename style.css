@@ -3,18 +3,27 @@
   margin-top: 0px;
 }
 
+.timer {
+    width: 100%;
+  margin-top: 0px;
+text-align: center;
+}
+
 body {
   margin-top: 0px;
   margin-left: 0px;
   margin-right: 0px;
+  align-items: center;
 }
-.bodypart{
+.bodypart-container{
     width:80%;
     margin-top: 0;
     margin-left:auto;
     margin-right:auto;
     text-align: center;
   }
+
+
    .round{
     font-size: 12px;
     color: #4D5259;
