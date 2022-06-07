@@ -17,6 +17,10 @@
     const delai = 1000;
     var autoClickPerSecond = 1;
     var interval = null;
+
+    var multipl = 1; // valeur de base du multiplicateur
+
+    var boost = 1;
         
     ///////////////////////////////////////////////////// Functions //////////////////////////////////////////////////////
     //Update Texts functions
@@ -26,7 +30,7 @@
     }
     //Update Current click text (current active multiplier bonus + current active autoclick bonus)
     function updateClickText(){
-        clickText.innerHTML = "Puntos per click: "+ 1 + " | AutoPuntos: " + autoClickPerSecond + "/sec"
+        clickText.innerHTML = "Puntos per click: "+ multipl + " | AutoPuntos: " + autoClickPerSecond + "/sec"
     }
     //Update the text of a button (Called when cost of a bonus changed)
     function updateBtnText(btn, text){
@@ -36,12 +40,17 @@
     //Other functions
     //Increment click (Called when user click the main button)
     function click(){
-        counter++;
+        counter = counter + ((1 * multipl)* boost);
         updatePuntosText();
     }
     //Update cost of a bonus button (Called when user bought a bonus)
     function updateBonusCost(bonusCost, incrementation){
         return bonusCost * incrementation;
+    }
+    // multiplicateur basique en X2
+    function multiplicateur()
+    {
+        multipl *= 2;
     }
 
     ///////////////////////////////////////////////////// Code //////////////////////////////////////////////////////
@@ -85,4 +94,16 @@
         }
     });
 
+    multiplierBonusBtn.addEventListener("click", ()=>{
+
+        if(counter >= multiplierBonusCost)
+        {
+            counter -= multiplierBonusCost;
+            updatePuntosText();
+            multiplicateur();
+            multiplierBonusCost = updateBonusCost(multiplierBonusCost, 2);
+            updateBtnText(multiplierBonusBtn, "click harder: " + multiplierBonusCost);
+            updateClickText();
+        }
+    })
 })();
