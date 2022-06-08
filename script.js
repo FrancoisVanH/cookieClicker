@@ -21,7 +21,6 @@
 
     var boostActive = false;
     var boost = 1;
-    var now = 30;
  
     var multipl = 1;
 
@@ -29,7 +28,7 @@
     //Update Texts functions
     //Update Score text (= total text = "puntos text")
     function updatePuntosText(){
-        puntos.innerHTML = "Puntos: " + counter;
+        puntos.innerHTML = "+" + counter;
     }
     //Update Current click text (current active multiplier bonus + current active autoclick bonus)
     function updateClickText(){
@@ -111,6 +110,7 @@
             //Decrease the score by the bonus cost
             counter -= boostBonusCost;
             updatePuntosText();
+            var now = 30;
             //change boostActive on
             boostActive = true;
 
@@ -121,7 +121,7 @@
             //Set boost
             var intervalBoost = setInterval(()=>{
 
-              for(let j = 0; j < autoClickPerSecond; j++){
+              
 
                 updatePuntosText();
                 now--;
@@ -135,7 +135,7 @@
                 boostActive = false;
                 }
 
-              }
+              
             }, delai);
         }
         else{
