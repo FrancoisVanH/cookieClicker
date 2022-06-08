@@ -25,26 +25,28 @@
 }
 
 h1{
-  margin-top: 25px;
+  margin-top: 15px;
   margin-bottom: 0px;
   max-width: 100%;
   text-align: center;
-  font-family: "Monument";
-  font-size: 3em;
-  transform: scale(1, 2);
+  font-family: "Smiley-Cookie";
+  font-size: 5em;
   background-color: #00CC1F;
   width: 100%;
   color: white;
-  max-height: 50px;
-  padding-bottom: 5px;
   
 }
 
 .gameInfo {
+    background-color: #00CC1F;
+    display: flex;
+    white-space: nowrap;
+    overflow: hidden;
   margin-top: 0;
   display: flex;
   margin: 0;
   padding: 0;
+  
 }
 
 .timer {
@@ -62,7 +64,7 @@ body {
 }
 .bodypart-container{
     width:80%;
-    margin-top: 40px;
+    margin-top: 20px;
     margin-left:auto;
     margin-right:auto;
     text-align: center;
@@ -72,10 +74,10 @@ body {
 .IMG-SPACE{
 display: block;
 margin: auto;
-margin-top: 20px;
+margin-top: 5px;
 margin-bottom: 0px;
 text-align: center;
-padding:15px;
+padding:0px;
 }
 /* container de l'image - gere l'espace */
 
@@ -189,26 +191,26 @@ height: 30px;
   .settings:hover {
     background: #d3d3d3;
   }
+
+
+
+
   .loop-holder {
     display: flex;
     white-space: nowrap;
     overflow: hidden;
     background-color: black;
-
-
-
   }
   
   .loop-holder__text {
       display: flex;
       animation: textLoop 10s linear infinite;
-      font-size: 13vw;
+      font-size: 10vw;
       text-indent: .55em;
       align-self: auto;
-      padding-top: 17px;
+      padding-top: 12px;
       padding-bottom: 1px;
       color: white;
-      
       font-family: "Smiley-Cookie";
   }
   
@@ -225,15 +227,53 @@ height: 30px;
   }
 
 
-  .banderolle-bottom{
-  display: flex;
-  height: 75px;
-  background-color: rgb(189, 131, 255);
-  width: 100%;
+
+.loop-holder_base {
+display: flex;
+white-space: nowrap;
+overflow: hidden;
+background-color: #BD83FF; 
+  }
+
+.loop-holder__text_fenzy {
+      display: flex;
+      height: 74px;
+      animation: textLoop 10s linear infinite;
+      font-size:8vh;
+      text-indent: .55em;
+      align-self: auto;
+      padding-top:16px;
+      padding-bottom:0;
+      color: white;
+      font-family: "Smiley-Cookie";
 }
 
-.timer {
- margin: auto;
- font-family: "Monument";
- font-size: 1.5em;
+/* timer */
+
+
+.loop-holder_auto-click  {
+
+}
+
+.loop-holder__text_auto {
+
+}
+
+
+body {
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
