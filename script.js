@@ -1,4 +1,3 @@
-(()=> {
     ///////////////////////////////////////////////////// Variables //////////////////////////////////////////////////////
     var counter = 0;
 
@@ -240,4 +239,3 @@
     multiplierBonusBtn.addEventListener("click", ()=>{
         multiplierBonusClick();
     })
-})();
