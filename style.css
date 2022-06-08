@@ -73,14 +73,11 @@ body {
 /* container de l'image - gere l'espace */
 .IMG-SPACE{
 display: block;
-margin: 0 auto;
+margin: auto;
 margin-top: 5px;
 margin-bottom: 0px;
 text-align: center;
 padding:0px;
-position: relative;
-border-radius: 50%;
-
 }
 /* container de l'image - gere l'espace */
 
@@ -161,22 +158,9 @@ height: 30px;
 
 }
 
-/* star CSS */
-#img-action
-{
-  max-width: 60px;
-  max-height: 60px;
-}
 
-#actionClicker
-{
-  position: absolute;
-  pointer-events: none;
-  display: none;
-  opacity: 0;
-  transition: all 0.3s ease-out;
-}
-/* star CSS */
+
+
 
 
   .round01:active {
