@@ -8,12 +8,12 @@
 
     <title>SmileyClicker</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="./img/favicon.png">
      
 </head>
   
 <body>
-  
+<div clas="double">
   <div class="banderole">
 
    <div class="loop-holder">
@@ -24,11 +24,12 @@
         <div class="loop-holder__text">Welcome to smiley clicker</div>
     </div>
   </div>
- 
-  <div class="bodypart-container">
-    <div class="gameInfo">
-        <h1 id='totalText'>Puntos: 0</h1>
+
+  <div class="gameInfo">
+        <h1 id='totalText'>+2345</h1>
     </div>
+  <div class="bodypart-container">
+  </div>
 
   </div>
     <div class="IMG-SPACE">
@@ -36,26 +37,63 @@
       </div> <!-- smiley Tim -->
     <br><br>
   </div>
-    <div class="container-btn">
-      <h4 id="clickText">Puntos per click: 1 | AutoPuntos: 0/sec </h4>
-      <div class ="button1">
-      <button id='multplierBonus' class="round">click harder: 15</button> 
-      </div>
 
-    <div class ="button2">
-      <button id='autoClickBonus' class="round">auto click: 25 | +1/sec</button>
-      </div>
-    <div class="button3">
-      <button id='boostBonus' class="round">frenzy: 30 | x200%/30sec</button><br><br>
-    </div>
+   <h4 id="clickText">Puntos per click: 1 | AutoPuntos: 0/sec </h4>
 
 
-     
+<div class="container-btn-all">
 
-    </div>
- <div class="timer" id="text-timer">
-      Frenzy timer: 30s
-    </div>
+      <!-- bouton 1-->
+   <button class="round01">
+        <div class="img-col">
+        <img src="./img/smiley_svg_icon.svg" class="icon01">
+        </div>
+        <div class="container-btn">
+              <p id='multplierBonus'>click harder: 15</p>
+        </div>
+        <div class="empty">
+          <span></span>
+        </div>
+    </button>
+      <!-- bouton 1-->
+
+
+    <!-- bouton 2-->
+  <button class="round01">
+    <div class="img-col">
+        <img src="./img/hand_svg_icon.svg" class="icon01">
+        </div>
+        <div class="container-btn">
+              <p id='autoClickBonus'>auto click: 25 | +1/sec</p>
+        </div>
+         <div class="empty">
+          <span></span>
+        </div>
+    </button>
+     <!-- bouton 2-->
+
+
+
+    <!-- bouton 3-->
+    <button class="round01">
+    <div class="img-col">
+        <img src="./img/flame_svg_icon.svg" class="icon01">
+        </div>
+        <div class="container-btn">
+              <p id='boostBonus'>frenzy: 30 | x200%/30sec</p>
+        </div>
+         <div class="empty">
+          <span></span>
+        </div>
+    </button>
+    <!-- bouton 3-->
+
+
+</div>
+  <div class="banderolle-bottom">
+        <div class="timer" id="text-timer">Frenzy timer: 30s</div>
+  </div>
+
     <script src="script.js"></script>
 </body>
 

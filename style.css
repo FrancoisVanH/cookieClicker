@@ -2,16 +2,50 @@
   font-family: "Smiley-Cookie";
   src: url(./font/Smiley-Click.otf);
 }
+
 @font-face {
-   font-family: "Grotesk";
-  src:url(./font/MonumentGrotesk-Mono.ttf);
+  font-family: "Grotesk";
+  src: url(./font/MonumentGrotesk-Mono.ttf);
 }
 
+@font-face {
+  font-family: "Monument";
+  src: url(./font/monumentextended-ultrabold.otf);
+}
+
+
+.double {
+  display: flex;
+  margin:0
+}
 .banderolle{
   width: 100%;
   margin-top: 0px;
+  margin-bottom: 0px;
 }
 
+h1{
+  margin-top: 25px;
+  margin-bottom: 0px;
+  max-width: 100%;
+  text-align: center;
+  font-family: "Monument";
+  font-size: 3em;
+  transform: scale(1, 2);
+  background-color: #00CC1F;
+  width: 100%;
+  color: white;
+  max-height: 50px;
+  padding-bottom: 5px;
+  
+}
+
+.gameInfo {
+  margin-top: 0;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
 
 .timer {
 width: 100%;
@@ -27,7 +61,7 @@ body {
 }
 .bodypart-container{
     width:80%;
-    margin-top: 0;
+    margin-top: 40px;
     margin-left:auto;
     margin-right:auto;
     text-align: center;
@@ -37,10 +71,10 @@ body {
 .IMG-SPACE{
 display: block;
 margin: auto;
-margin-top: 30px;
-margin-bottom: 30px;
+margin-top: 20px;
+margin-bottom: 0px;
 text-align: center;
-padding:30px;
+padding:15px;
 }
 /* container de l'image - gere l'espace */
 
@@ -52,8 +86,10 @@ box-shadow: 4px 4px 0 0 #000000;
  border-radius: 50%;  
  max-width: 70%;
  background-color: #000000;
-  }
-  .img-click:active{
+}
+
+
+.img-click:active{
   transform: translateY(4px) translateX(4px);
   box-shadow: 0px 0px 0 0 #000000;
   }
@@ -63,55 +99,73 @@ box-shadow: 4px 4px 0 0 #000000;
 
 
 /* button du shop */
+
+
+
+  
+
 h4 {
   text-align: center;
   font-family: "Grotesk";
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
-.container-btn{
-  margin-left: 1.4em;
-  margin-right: 1.4em;
+
+
+
+/* button flex*/
+.container-btn-all{
+  margin-bottom:2.1em;
+}
+
+.round01{
+  font-family: "Grotesk";
+  width: 340px;
+  max-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
   margin-bottom: 2em;
+  transition: ease all .1s;
+  background: #FFFFFF;
+  border: 2px solid #4D5259;
+  box-shadow: 4px 4px 0 0 #000000;
+  border-radius: 200px ;
+  padding-bottom: 10px; /* sa mere la pute ce truc */
 }
 
-.button1{
-  display: flex;
-  flex-basis: 30%;
-  padding-bottom: 1.5em;
 
-}
-.button2{
-  display: flex;
-  padding-bottom: 1.5em;
-
-
-}
-.button3{
-  display: flex;
+/* button flex*/
+.img-col{
+  padding-top: 15px; /* sa mere la pute ce truc */
+padding-left: 5px;
 
 }
 
 
-.round{
-    font-family: "Grotesk";
-    flex: 1;
-    font-size: 0.8em;
-    color: #000000;
-    line-height: 1.5;
-    font-weight: bold;
-    padding: 10px 10px;
-    background: #FFFFFF;
-    box-shadow: 4px 4px 0 0 #000000;
-    border-radius: 200px ;
-    outline:0;
-    transition: ease all .1s;
-  } 
+.icon01{
+width: 30px;
+height: 30px;
+
+}
 
 
-  .round:active {
+.container-btn{
+
+
+}
+
+
+
+
+
+
+  .round01:active {
     transform: translateY(4px) translateX(4px);
     box-shadow: 0px 0px 0 0 #4D5259;
   }
-  .round:hover {
+  .round01:hover {
     background: #d3d3d3;
   }
   /* buttons du shop */
@@ -168,3 +222,17 @@ h4 {
           transform: translate3d(-100%, 0, 0)
       }
   }
+
+
+  .banderolle-bottom{
+  display: flex;
+  height: 75px;
+  background-color: rgb(189, 131, 255);
+  width: 100%;
+}
+
+.timer {
+ margin: auto;
+ font-family: "Monument";
+ font-size: 1.5em;
+}
