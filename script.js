@@ -11,7 +11,7 @@
     var multiplierBonusBtn = document.getElementById("multplierBonus");
     var boostBonusBtn = document.getElementById("boostBonus");
 
-    var autoClickBonusCost = 25;
+    var autoClickBonusCost = 100;
     var multiplierBonusCost = 15;
     var boostBonusCost = 30;
     
@@ -21,7 +21,6 @@
 
     var boostActive = false;
     var boost = 1;
-    var now = 30;
  
     var multipl = 1;
 
@@ -29,11 +28,11 @@
     //Update Texts functions
     //Update Score text (= total text = "puntos text")
     function updatePuntosText(){
-        puntos.innerHTML = "Puntos: " + counter;
+        puntos.innerHTML = "+" + counter;
     }
     //Update Current click text (current active multiplier bonus + current active autoclick bonus)
     function updateClickText(){
-        clickText.innerHTML = "Puntos per click: "+ multipl + " | AutoPuntos: " + autoClickPerSecond + "/sec"
+        clickText.innerHTML = "Smiley per click: "+ multipl + " | Auto click: " + autoClickPerSecond + "/sec";
     }
     //Update the text of a button (Called when cost of a bonus changed)
     function updateBtnText(btn, text){
@@ -86,7 +85,7 @@
 
             //Increase the bonus cost and update the bonus button text
             autoClickBonusCost = updateBonusCost(autoClickBonusCost, 2);
-            updateBtnText(autoClickBonusBtn, "auto click: " + autoClickBonusCost + " | +" + (autoClickPerSecond * 2) + "/sec");
+            updateBtnText(autoClickBonusBtn, "Auto click: " + autoClickBonusCost + " | +" + (autoClickPerSecond * 2) + "/sec");
 
             //Update click text
             updateClickText();
@@ -111,17 +110,18 @@
             //Decrease the score by the bonus cost
             counter -= boostBonusCost;
             updatePuntosText();
+            var now = 30;
             //change boostActive on
             boostActive = true;
 
             //Increase the bonus cost and update the bonus button text
             boostBonusCost = updateBonusCost(boostBonusCost, 2);
-            updateBtnText(boostBonusBtn, "frenzy: "+boostBonusCost+" | X200%/30sec");
+            updateBtnText(boostBonusBtn, "Frenzy: "+boostBonusCost+" | X200%/30sec");
 
             //Set boost
             var intervalBoost = setInterval(()=>{
 
-              for(let j = 0; j < autoClickPerSecond; j++){
+              
 
                 updatePuntosText();
                 now--;
@@ -135,7 +135,7 @@
                 boostActive = false;
                 }
 
-              }
+              
             }, delai);
         }
         else{
@@ -152,7 +152,7 @@
             updatePuntosText();
             multiplicateur();
             multiplierBonusCost = updateBonusCost(multiplierBonusCost, 2);
-            updateBtnText(multiplierBonusBtn, "click harder: " + multiplierBonusCost);
+            updateBtnText(multiplierBonusBtn, "Multiplicator: " + multiplierBonusCost);
             updateClickText();
         }
     })
