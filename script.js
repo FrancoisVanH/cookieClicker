@@ -5,7 +5,7 @@
     var clicker = document.getElementById("clicker");
     var clickText = document.getElementById("clickText");
     var puntos = document.getElementById("totalText");
-    var textTimer = document.getElementById("text-timer");
+    var textTimer = document.querySelectorAll("#base");
 
     var autoClickBonusBtn = document.getElementById("autoClickBonus");
     var multiplierBonusBtn = document.getElementById("multplierBonus");
@@ -141,13 +141,18 @@
             now--;
 
             //Change text timer
-            textTimer.innerHTML = "Frenzy timer: "+now+"s";
-
+            for(let x in textTimer){
+                textTimer[x].innerHTML = "00:"+now.toString().padStart(2,"0");
+            }
+         
             //stop interval after 30s
             if(now<=0){
                 clearInterval(intervalBoost);
                 boostActive = false;
                 boost = 1;
+                for(let x in textTimer){
+                    textTimer[x].innerHTML = "WELCOME to smiley clicker";
+                }
 
                 updateClickText();
             }
@@ -204,9 +209,22 @@
     ///////////////////////////////////////////////////// Code //////////////////////////////////////////////////////
 
     //Click
-    clicker.addEventListener("click", ()=>{
-        click();     
-    });
+    clicker.addEventListener("click", (e)=>{
+        click(); 
+           let actionClicker = document.getElementById("actionClicker");
+        actionClicker.style.left = `${e.offsetX - 40}px`;
+        actionClicker.style.top = `${e.offsetY - 35}px`; 
+        actionClicker.style.display = 'inline';
+        actionClicker.style.opacity = '1';
+        setTimeout(() => {
+        //    actionClicker.style.display = 'none';
+            actionClicker.style.opacity = '0';
+        }, 300);
+        setTimeout(() => {
+            actionClicker.style.display = 'none';
+        }, 600);
+    }); 
+
 
     autoClickBonusBtn.addEventListener("click", ()=>{
         autoclickBonusClick();
