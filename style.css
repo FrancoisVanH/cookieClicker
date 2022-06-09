@@ -1,295 +1,576 @@
-@font-face {
-  font-family: "Smiley-Cookie";
-  src: url(./font/Smiley-Click.otf);
-}
+  @font-face {
+    font-family: "Smiley-Cookie";
+    src: url(./font/Smiley-Click.otf);
+  }
 
-@font-face {
-  font-family: "Grotesk";
-  src: url(./font/MonumentGrotesk-Mono.ttf);
-}
+  @font-face {
+    font-family: "Grotesk";
+    src: url(./font/MonumentGrotesk-Mono.ttf);
+  }
 
-@font-face {
-  font-family: "Monument";
-  src: url(./font/monumentextended-ultrabold.otf);
-}
+  @font-face {
+    font-family: "Monument";
+    src: url(./font/monumentextended-ultrabold.otf);
+  }
 
 
-.double {
-  display: flex;
-  margin:0
-}
-.banderolle{
-  width: 100%;
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-
-h1{
-  margin-top: 15px;
-  margin-bottom: 0px;
-  max-width: 100%;
-  text-align: center;
-  font-family: "Smiley-Cookie";
-  font-size: 5em;
-  background-color: #00CC1F;
-  width: 100%;
-  color: white;
-  
-}
-
-.gameInfo {
-    background-color: #00CC1F;
+  .double {
     display: flex;
-    white-space: nowrap;
-    overflow: hidden;
-  margin-top: 0;
-  display: flex;
-  margin: 0;
-  padding: 0;
-  
-}
+    margin:0
+  }
+  .banderolle{
+    width: 100%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
 
-.timer {
-width: 100%;
-margin-top: 0px;
-text-align: center;
-}
-
-body {
-  margin-top: 0px;
-  margin-left: 0px;
-  margin-right: 0px;
-  margin-bottom: 0px;
-  align-items: center;
-}
-.bodypart-container{
-    width:80%;
-    margin-top: 20px;
-    margin-left:auto;
-    margin-right:auto;
+  h1{
+    margin-top: 15px;
+    margin-bottom: 0px;
+    max-width: 100%;
     text-align: center;
-
+    font-family: "Smiley-Cookie";
+    font-size: 5em;
+    background-color: #00CC1F;
+    width: 100%;
+    color: white;
+    
   }
-/* container de l'image - gere l'espace */
-.IMG-SPACE{
-display: block;
-margin: 0 auto;
-margin-top: 5px;
-margin-bottom: 0px;
-text-align: center;
-padding:0px;
-position: relative;
-border-radius: 50%;
 
-}
-/* container de l'image - gere l'espace */
-
-
-/* shadow de l'image */
-.img-click{
-box-shadow: 0px 8px 0 0 #000000;
- transition: ease all 1ms;
- border-radius: 50%;  
- max-width: 70%;
- background-color: #000000;
-}
-
-.img-click:active{
-  transform: translateY(10px) translateX(1px);
-  box-shadow: 0px 0px 0 0 #000000;
+  .gameInfo {
+      background-color: #00CC1F;
+      display: flex;
+      white-space: nowrap;
+      overflow: hidden;
+    margin-top: 0;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    
   }
- /* shadow de l'image */
 
-
-
-
-/* button du shop */
-
-
-
-  
-
-h4 {
+  .timer {
+  width: 100%;
+  margin-top: 0px;
   text-align: center;
-  font-family: "Grotesk";
-  margin-bottom: 10px;
-  margin-top: 10px;
-} /* only for iphone 12pro */
-
-
-
-/* button flex*/
-.container-btn-all{
-  margin-bottom:2.1em;
-}
-
-.round01{
-  font-family: "Grotesk";
-  width: 340px;
-  max-height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: auto;
-  margin-bottom: 2em;
-  transition: ease all .1s;
-  background: #FFFFFF;
-  border: 2px solid #4D5259;
-  box-shadow: 0px 7px 0 1px #000000;
-  border-radius: 200px ;
-  padding-bottom: 10px; /* sa mere la pute ce truc */
-}
-
-
-/* button flex*/
-.img-col{
-  padding-top: 15px; /* sa mere la pute ce truc */
-padding-left: 5px;
-
-}
-
-
-.icon01{
-width: 30px;
-height: 30px;
-
-}
-
-
-.container-btn{
-
-
-}
-
-/* star CSS */
-#img-action
-{
-  max-width: 60px;
-  max-height: 60px;
-}
-
-#actionClicker
-{
-  position: absolute;
-  pointer-events: none;
-  display: none;
-  opacity: 0;
-  transition: all 0.3s ease-out;
-}
-/* star CSS */
-
-
-  .round01:active {
-    transform: translateY(6px) translateX(0px);
-    box-shadow: 0px 0px 0 0 #4D5259;
   }
-  .round01:hover {
-    background: #d3d3d3;
+
+  body {
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    align-items: center;
   }
-  /* buttons du shop */
-  
-  .settings {
-    font-size: 2px;
-    color: #4D5259;
-    line-height: 1.5;
-    font-weight: bold;
-    padding: .5em 2em;
+  .bodypart-container{
+      width:80%;
+      margin-top: 20px;
+      margin-left:auto;
+      margin-right:auto;
+      text-align: center;
+
+    }
+  /* container de l'image - gere l'espace */
+  .IMG-SPACE{
+  display: block;
+  margin: 0 auto;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  text-align: center;
+  padding:0px;
+  position: relative;
+  border-radius: 50%;
+
+  }
+  /* container de l'image - gere l'espace */
+
+
+  /* shadow de l'image */
+  .img-click{
+  box-shadow: 0px 8px 0 0 #000000;
+  transition: ease all 1ms;
+  border-radius: 50%;  
+  max-width: 70%;
+  background-color: #000000;
+  }
+
+  .img-click:active{
+    transform: translateY(10px) translateX(1px);
+    box-shadow: 0px 0px 0 0 #000000;
+    }
+  /* shadow de l'image */
+
+
+
+
+  /* button du shop */
+
+
+
+    
+
+  h4 {
+    text-align: center;
+    font-family: "Grotesk";
+    margin-bottom: 10px;
+    margin-top: 10px;
+  } /* only for iphone 12pro */
+
+
+
+  /* button flex*/
+  .container-btn-all{
+    margin-bottom:2.1em;
+  }
+
+  .round01{
+    font-family: "Grotesk";
+    width: 340px;
+    max-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    margin-bottom: 2em;
+    transition: ease all .1s;
     background: #FFFFFF;
     border: 2px solid #4D5259;
-    box-shadow: 4px 4px 0 0 #000000;
-    outline:0;
+    box-shadow: 0px 7px 0 1px #000000;
+    border-radius: 200px ;
+    padding-bottom: 10px; /* sa mere la pute ce truc */
   }
-  
-  .settings:active {
-    transform: translateY(4px) translateX(4px);
-    box-shadow: 0px 0px 0 0 #4D5259;
+
+
+  /* button flex*/
+  .img-col{
+    padding-top: 15px; /* sa mere la pute ce truc */
+  padding-left: 5px;
+
   }
-  .settings:hover {
-    background: #d3d3d3;
+
+
+  .icon01{
+  width: 30px;
+  height: 30px;
+
   }
+
+
+  .container-btn{
+  font-size: 120%;
+  }
+
+  /* star CSS */
+  #img-action
+  {
+    max-width: 60px;
+    max-height: 60px;
+  }
+
+  #actionClicker
+  {
+    position: absolute;
+    pointer-events: none;
+    display: none;
+    opacity: 0;
+    transition: all 0.3s ease-out;
+  }
+  /* star CSS */
+
+
+    .round01:active {
+      transform: translateY(6px) translateX(0px);
+      box-shadow: 0px 0px 0 0 #4D5259;
+    }
+    .round01:hover {
+      background: #d3d3d3;
+    }
+    /* buttons du shop */
+    
+    .settings {
+      font-size: 2px;
+      color: #4D5259;
+      line-height: 1.5;
+      font-weight: bold;
+      padding: .5em 2em;
+      background: #FFFFFF;
+      border: 2px solid #4D5259;
+      box-shadow: 4px 4px 0 0 #000000;
+      outline:0;
+    }
+    
+    .settings:active {
+      transform: translateY(4px) translateX(4px);
+      box-shadow: 0px 0px 0 0 #4D5259;
+    }
+    .settings:hover {
+      background: #d3d3d3;
+    }
 
 
 
 
-  .loop-holder {
-    display: flex;
-    white-space: nowrap;
-    overflow: hidden;
-    background-color: black;
-  }
-  
-  .loop-holder__text {
+    .loop-holder {
       display: flex;
-      animation: textLoop 10s linear infinite;
-      font-size: 10vw;
-      text-indent: .55em;
-      align-self: auto;
-      padding-top: 12px;
-      padding-bottom: 1px;
-      color: white;
-      font-family: "Smiley-Cookie";
+      white-space: nowrap;
+      overflow: hidden;
+      background-color: black;
+    }
+    
+    .loop-holder__text {
+        display: flex;
+        animation: textLoop 10s linear infinite;
+        font-size: 10vw;
+        text-indent: .55em;
+        align-self: auto;
+        padding-top: 12px;
+        padding-bottom: 1px;
+        color: white;
+        font-family: "Smiley-Cookie";
+    }
+    
+    
+    @keyframes textLoop {
+        0% {
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0)
+        }
+        100% {
+            -webkit-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0)
+        }
+    }
+
+
+
+  .loop-holder_base {
+  display: flex;
+  white-space: nowrap;
+  overflow: hidden;
+  background-color: #BD83FF; 
+    }
+
+  .loop-holder__text_fenzy {
+        display: flex;
+        height: 74px;
+        animation: textLoop 10s linear infinite;
+        font-size:8vh;
+        text-indent: .55em;
+        align-self: auto;
+        padding-top:16px;
+        padding-bottom:0;
+        color: white;
+        font-family: "Smiley-Cookie";
   }
-  
-  
-  @keyframes textLoop {
-      0% {
-          -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0)
+
+  /* timer */
+
+
+  .loop-holder_auto-click  {
+
+  }
+
+  .loop-holder__text_auto {
+
+  }
+  .banderolle-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+
+
+  body {
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+  }
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  /*########################################################*/
+  @media screen and (min-width:1023px) and (max-width:1279px){
+    .IMG-SPACE{
+      display: block;
+      margin: 0 auto;
+      margin-top: 5px;
+      margin-bottom: 0px;
+      text-align: center;
+      padding:0px;
+      position: relative;
+      border-radius: 50%;
+      max-width: 50%;
       }
-      100% {
-          -webkit-transform: translate3d(-100%, 0, 0);
-          transform: translate3d(-100%, 0, 0)
+      h1{
+        margin-top: 15px;
+        margin-bottom: 0px;
+        max-width: 100%;
+        text-align: center;
+        font-family: "Smiley-Cookie";
+        font-size: 3em;
+        background-color: #00CC1F;
+        width: 100%;
+        color: white;
+        
       }
+      .loop-holder__text {
+        display: flex;
+        animation: textLoop 10s linear infinite;
+        font-size: 5vw;
+        text-indent: .55em;
+        align-self: auto;
+        padding-top: 12px;
+        padding-bottom: 1px;
+        color: white;
+        font-family: "Smiley-Cookie";
+      }
+      
+      
+      .contentContainer{
+        display: flex;
+        padding-top: 3em;
+      }
+      .contentContainer > * {
+        flex: 1 1;
+      }
+      .container-btn-all {
+        padding-top: 12px;
+        margin-bottom: 0px;
+        
+      }
+      .round01{
+        margin-bottom: 3em;
+        size: 150%;
+      }
+      body {
+        height: 100%;
+        min-height: 100%;
+        
+      }
+      .banderolle-bottom {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      }
+    }
+  /*########################################################*/
+  @media screen and (min-width:768px) and (max-width:1022px) {
+    .IMG-SPACE{
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 0px;
+      text-align: center;
+      padding:0px;
+      position: relative;
+      border-radius: 50%;
+      max-width: 50%;
+      padding-top: 7vh;
+      }
+      .banderolle{
+        width: 100%;
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+      
+      h1{
+        margin-top: 15px;
+        margin-bottom: 0px;
+        max-width: 100%;
+        text-align: center;
+        font-family: "Smiley-Cookie";
+        font-size: 5em;
+        background-color: #00CC1F;
+        width: 100%;
+        color: white;
+        
+      }
+      
+      .gameInfo {
+          background-color: #00CC1F;
+          display: flex;
+          white-space: nowrap;
+          overflow: hidden;
+        margin-top: 0;
+        display: flex;
+        margin: 0;
+        padding: 0;
+        
+      }
+      
+      .timer {
+      width: 100%;
+      margin-top: 0px;
+      text-align: center;
+      }
+
+      .banderolle-bottom {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+      }
+      .loop-holder_base {
+        display: flex;
+        white-space: nowrap;
+        overflow: hidden;
+        background-color: #BD83FF; 
+        height: 10vh;
+          }
+        
+        .loop-holder__text_fenzy {
+              display: flex;
+              height: 74px;
+              animation: textLoop 10s linear infinite;
+              font-size:8vh;
+              text-indent: .55em;
+              align-self: auto;
+              padding-top:16px;
+              padding-bottom:0;
+              color: white;
+              font-family: "Smiley-Cookie";
+        }
+        /**/
+        .container-btn-all {
+          padding-top: 12px;
+          margin-bottom: 0px;
+          
+        }
+        .container-btn{
+          font-size: 120%
+        }
+
+        .round01{
+          margin-bottom: 3em;
+          size: 150%;
+        }
+        body {
+          height: 100%;
+          min-height: 100%;
+        }
+        .loop-holder__text{
+          font-size:8vh;
+        }
   }
-
-
-
-.loop-holder_base {
-display: flex;
-white-space: nowrap;
-overflow: hidden;
-background-color: #BD83FF; 
-  }
-
-.loop-holder__text_fenzy {
+  /*########################################################*/
+  @media screen and (min-width:1280px) {
+    .IMG-SPACE{
+      display: block;
+      margin: 0 auto;
+      margin-top: 5px;
+      margin-bottom: 0px;
+      text-align: center;
+      padding:0px;
+      position: relative;
+      border-radius: 50%;
+      max-width: 75%;
+      }
+      h1{
+        margin-top: 15px;
+        margin-bottom: 0px;
+        max-width: 100%;
+        text-align: center;
+        font-family: "Smiley-Cookie";
+        font-size: 3em;
+        background-color: #00CC1F;
+        width: 100%;
+        color: white;
+        
+      }
+      .loop-holder__text {
+        display: flex;
+        animation: textLoop 10s linear infinite;
+        font-size: 5vw;
+        text-indent: .55em;
+        align-self: auto;
+        padding-top: 12px;
+        padding-bottom: 1px;
+        color: white;
+        font-family: "Smiley-Cookie";
+      }
+      
+      
+      .contentContainer{
+        display: flex;
+        padding-top: 3em;
+      }
+      .contentContainer > * {
+        flex: 1 1;
+      }
+      .container-btn-all {
+        padding-top: 12px;
+        margin-bottom: 0px;
+        
+      }
+      .round01{
+        margin-bottom: 3em;
+        size: 150%;
+      }
+      body {
+        height: 100%;
+        min-height: 100%;
+        
+      }
+    .banderolle-bottom {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+    }
+    .loop-holder_base {
       display: flex;
-      height: 74px;
-      animation: textLoop 10s linear infinite;
-      font-size:8vh;
-      text-indent: .55em;
-      align-self: auto;
-      padding-top:16px;
-      padding-bottom:0;
-      color: white;
-      font-family: "Smiley-Cookie";
-}
-
-/* timer */
-
-
-.loop-holder_auto-click  {
-
-}
-
-.loop-holder__text_auto {
-
-}
-
-
-body {
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
-	height: 100vh;
-}
-
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
+      white-space: nowrap;
+      overflow: hidden;
+      background-color: #BD83FF; 
+      height: 15vh;
+        }
+      
+      .loop-holder__text_fenzy {
+            display: flex;
+            height: 74px;
+            animation: textLoop 10s linear infinite;
+            font-size:10vh;
+            text-indent: .55em;
+            align-self: auto;
+            padding-top:16px;
+            padding-bottom:0;
+            color: white;
+            font-family: "Smiley-Cookie";
+      }
+      .round01{
+        margin-bottom: 4.5em;
+        size: 150%;
+      }
+    }    /*########################################################*/
+  @media screen and (max-width:375px) {
+    .IMG-SPACE{
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 0px;
+      text-align: center;
+      padding:0px;
+      position: relative;
+      border-radius: 50%;
+      max-width: 50%;
+      padding-top: 1vh;
+      }
+      h1{
+        margin-top: 15px;
+        margin-bottom: 0px;
+        max-width: 100%;
+        text-align: center;
+        font-family: "Smiley-Cookie";
+        font-size: 3em;
+        background-color: #00CC1F;
+        width: 100%;
+        color: white;
+      }
+  }
