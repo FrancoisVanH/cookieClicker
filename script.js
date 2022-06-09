@@ -5,12 +5,24 @@
     var clickText = document.getElementById("clickText");
     var puntos = document.getElementById("totalText");
     var textTimer = document.querySelectorAll("#base");
+    var btnIcons = document.querySelectorAll(".icon01");
     var bandTop = document.querySelectorAll("#band01");
     
 
-    var autoClickBonusBtn = document.getElementById("autoClickBonus");
-    var multiplierBonusBtn = document.getElementById("multplierBonus");
-    var boostBonusBtn = document.getElementById("boostBonus");
+    var autoClickBonusText = document.getElementById("autoClickBonus");
+    var autoClickBonusBtn = document.getElementById("bouton2");
+    autoClickBonusBtn.disabled = true;
+    changeIcone(btnIcons[1], "./img/hand_svg_icon_off.svg");
+
+    var multiplierBonusText = document.getElementById("multplierBonus");
+    var multiplierBonusBtn = document.getElementById("bouton1");
+    multiplierBonusBtn.disabled = true;
+    changeIcone(btnIcons[0], "./img/smiley_svg_icon_off.svg");
+
+    var boostBonusText = document.getElementById("boostBonus");
+    var boostBonusBtn = document.getElementById("bouton3");
+    boostBonusBtn.disabled = true;
+    changeIcone(btnIcons[2], "./img/flame_svg_icon_off.svg");
 
     var autoClickBonusCost = 100;
     var multiplierBonusCost = 15;
@@ -57,6 +69,37 @@ const delai = 1000;
     function click(){
         counter = counter + ((1 * multipl)* boost);
         updatePuntosText();
+        UpdateDisableStateBonusBtn();
+    }
+
+    function UpdateDisableStateBonusBtn(){
+
+        if(checkScore(autoClickBonusCost, counter)){
+            autoClickBonusBtn.disabled = false;
+            changeIcone(btnIcons[1], "./img/hand_svg_icon.svg");
+        }
+        else{
+            autoClickBonusBtn.disabled = true;
+            changeIcone(btnIcons[1], "./img/hand_svg_icon_off.svg");
+        }
+
+        if(checkScore(multiplierBonusCost, counter)){
+            multiplierBonusBtn.disabled = false;
+            changeIcone(btnIcons[0], "./img/smiley_svg_icon.svg");
+        }
+        else{
+            multiplierBonusBtn.disabled = true;
+            changeIcone(btnIcons[0], "./img/smiley_svg_icon_off.svg");
+        }
+        
+        if(checkScore(boostBonusCost, counter)){
+            boostBonusBtn.disabled = false;
+            changeIcone(btnIcons[2], "./img/flame_svg_icon.svg");
+        }
+        else{
+            boostBonusBtn.disabled = true;
+            changeIcone(btnIcons[2], "./img/flame_svg_icon_off.svg");
+        }
     }
 
     /**
@@ -92,6 +135,10 @@ const delai = 1000;
         }
     }
 
+    function changeIcone(icone, newSrc){
+        icone.src = newSrc;
+    }
+
     /**
      * Create new autoclick (interval) each seconds 
      */
@@ -111,6 +158,7 @@ const delai = 1000;
         if(checkScore(autoClickBonusCost, counter)){
             //Decrease the score by the bonus cost
             counter -= autoClickBonusCost;
+            UpdateDisableStateBonusBtn();
             updatePuntosText();
               document.body.style.backgroundColor = 'rgb(172, 73, 255)'; // mauve
             for (let x in bandTop) {
@@ -128,7 +176,7 @@ const delai = 1000;
             autoClickPerSecond++;
 
             autoClickBonusCost = updateBonusCost(autoClickBonusCost, 2);
-            updateBtnText(autoClickBonusBtn, "Auto click: " + autoClickBonusCost + " | +" + (autoClickPerSecond + 1) + "/sec");
+            updateBtnText(autoClickBonusText, "Auto click: " + autoClickBonusCost + " | +" + (autoClickPerSecond + 1) + "/sec");
 
             updateClickText();
 
@@ -187,6 +235,7 @@ function timeOutfunc() {
         if(checkScore(boostBonusCost, counter) && !boostActive){
             //Decrease the score by the bonus cost
             counter -= boostBonusCost;
+            UpdateDisableStateBonusBtn();
             updatePuntosText();
             document.body.style.backgroundColor = 'rgb(255, 34, 0)';
 
@@ -200,7 +249,7 @@ function timeOutfunc() {
             updateClickText();
 
             boostBonusCost = updateBonusCost(boostBonusCost, 2);
-            updateBtnText(boostBonusBtn, "Frenzy: "+boostBonusCost+" | X200%/30sec");
+            updateBtnText(boostBonusText, "Frenzy: "+boostBonusCost+" | X200%/30sec");
 
             intervalBonusBoost();
             
@@ -216,6 +265,7 @@ function timeOutfunc() {
     function multiplierBonusClick(){        
         if(checkScore(multiplierBonusCost, counter)){
             counter -= multiplierBonusCost;
+            UpdateDisableStateBonusBtn();
             updatePuntosText();
             multiplicateur();
              document.body.style.backgroundColor = 'rgb(255, 174, 0)'; // jaune
@@ -224,7 +274,7 @@ function timeOutfunc() {
         }
 
             multiplierBonusCost = updateBonusCost(multiplierBonusCost, 1.5);
-            updateBtnText(multiplierBonusBtn, "Multiplicator: " + Math.round(multiplierBonusCost * 100) / 100);
+            updateBtnText(multiplierBonusText, "Multiplicator: " + Math.round(multiplierBonusCost * 100) / 100);
             updateClickText();
         }
         else{
@@ -256,20 +306,14 @@ function timeOutfunc() {
 
     autoClickBonusBtn.addEventListener("click", ()=>{
         autoclickBonusClick();
-    
-        
     });
-
-
+    
+    
     boostBonusBtn.addEventListener("click", ()=>{
         boostBonusClick(); 
-        // rouge
-     
     });
-
-
+    
+    
     multiplierBonusBtn.addEventListener("click", () => {
-    multiplierBonusClick();
-     // jaune
-
+        multiplierBonusClick();
     });
