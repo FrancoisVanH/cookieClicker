@@ -200,7 +200,7 @@ function multiplierBonusClick(){
             document.body.style.backgroundColor = 'rgb(255, 174, 0)'; // jaune
         }
         
-        updateBanderoleText('MULTI ACTIVATED');
+        updateBanderoleText('%% MULTI ACTIVATED');
 
         multiplierBonusCost = updateBonusCost(multiplierBonusCost, 1.5);
         updateBtnText(multiplierBonusText, "Multiplicator: " + Math.round(multiplierBonusCost * 100) / 100);
@@ -233,7 +233,7 @@ function autoclickBonusClick(){
             document.body.style.backgroundColor = 'rgb(172, 73, 255)'; // mauve
         }
         
-        updateBanderoleText('AUTO CLICK ACTIVATED');
+        updateBanderoleText('> AUTO CLICK ACTIVATED');
 
         //Stop previous interval and increase the bonus per second
         if(intervalAutoClick != null){
@@ -279,7 +279,7 @@ function boostBonusTimeOut(){
  */
 function intervalBonusBoost(){
     for(let x in textTimer){
-            textTimer[x].innerHTML = "FRENZY FRENZY FRENZY";
+            textTimer[x].innerHTML = ") FRENZY ) FRENZY ) FRENZY";
     }
     var intervalBoost = setInterval(()=>{
         updateScoreText();
