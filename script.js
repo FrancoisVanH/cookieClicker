@@ -5,6 +5,8 @@
     var clickText = document.getElementById("clickText");
     var puntos = document.getElementById("totalText");
     var textTimer = document.querySelectorAll("#base");
+     var bandTop = document.querySelectorAll(".loop-holder__text");
+    
 
     var autoClickBonusBtn = document.getElementById("autoClickBonus");
     var multiplierBonusBtn = document.getElementById("multplierBonus");
@@ -14,7 +16,7 @@
     var multiplierBonusCost = 15;
     var boostBonusCost = 60;
     
-    const delai = 1000;
+const delai = 1000;
     var autoClickPerSecond = 0;
     var intervalAutoClick = null;
 
@@ -110,6 +112,10 @@
             //Decrease the score by the bonus cost
             counter -= autoClickBonusCost;
             updatePuntosText();
+              document.body.style.backgroundColor = 'rgb(172, 73, 255)'; // mauve
+            for (let x in textTimer) {
+            bandTop[x].innerHTML = 'AUTO CLICK ACTIVATED';
+            }
 
             //Stop previous interval and increase the bonus per second
             if(intervalAutoClick != null){
@@ -133,30 +139,40 @@
         }
     }
 
+function timeOutfunc() {
+    for (let x in textTimer) {
+        textTimer[x].innerHTML = "00:" + now.toString().padStart(2, "0");
+    }
+    if (now <= 0) {
+        for (let x in textTimer) {
+            textTimer[x].innerHTML = "WELCOME to smiley clicker";
+        }
+    }
+}
     /**
      * interval pour le boost bonus
      */
-    function intervalBonusBoost (){
+        function intervalBonusBoost() {
+        for (let x in textTimer) {
+                textTimer[x].innerHTML = "FRENZY FRENZY FRENZY";
+    }
         var intervalBoost = setInterval(()=>{
 
             updatePuntosText();
             now--;
-            document.body.style.backgroundColor = 'rgb(255, 34, 0)';
-
-            //Change text timer
-            for(let x in textTimer){
-                textTimer[x].innerHTML = "FENZZZY MODE 00:"+now.toString().padStart(2,"0");
-            }
-         
+             // rouge
+            
+            let timeOutBand = setTimeout(() => {
+                //Change text timer
+                timeOutfunc();
+            }, 2000);
+            
             //stop interval after 30s
             if(now<=0){
                 clearInterval(intervalBoost);
                 boostActive = false;
                 boost = 1;
-                for(let x in textTimer){
-                    textTimer[x].innerHTML = "WELCOME to smiley clicker";
-                }
-                document.body.style.backgroundColor = 'rgb(255, 255, 255)';
+               // document.body.style.backgroundColor = 'rgb(255, 255, 255)'; // blanc
                 updateClickText();
             }
             
@@ -172,6 +188,8 @@
             //Decrease the score by the bonus cost
             counter -= boostBonusCost;
             updatePuntosText();
+            document.body.style.backgroundColor = 'rgb(255, 34, 0)';
+
             
             now = 30;
             //change boostActive on
@@ -200,6 +218,10 @@
             counter -= multiplierBonusCost;
             updatePuntosText();
             multiplicateur();
+             document.body.style.backgroundColor = 'rgb(255, 174, 0)'; // jaune
+            for (let x in textTimer) {
+            bandTop[x].innerHTML = 'MULTI ACTIVATED';
+    }
 
             multiplierBonusCost = updateBonusCost(multiplierBonusCost, 1.5);
             updateBtnText(multiplierBonusBtn, "Multiplicator: " + Math.round(multiplierBonusCost * 100) / 100);
@@ -227,30 +249,28 @@
         setTimeout(() => {
             actionClicker.style.display = 'none';
         }, 600);
+        
 
     }); 
 
 
     autoClickBonusBtn.addEventListener("click", ()=>{
         autoclickBonusClick();
-        document.body.style.backgroundColor = 'rgb(172, 73, 255)';
-        for (let x in textTimer) {
-            textTimer[x].innerHTML = 'AUTO CLICK ACTIVATED';
-        }
+    
         
     });
 
 
     boostBonusBtn.addEventListener("click", ()=>{
-        boostBonusClick();    
+        boostBonusClick(); 
+        // rouge
      
     });
 
 
-    multiplierBonusBtn.addEventListener("click", ()=>{
-        multiplierBonusClick();
-        document.body.style.backgroundColor = 'rgb(255, 174, 0)';
-        for (let x in textTimer) {
-            textTimer[x].innerHTML = 'MULTI ACTIVATED';
-        }
-    });
+    multiplierBonusBtn.addEventListener("click", () => {
+    multiplierBonusClick();
+     // jaune
+
+});
+
