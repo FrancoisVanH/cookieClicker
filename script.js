@@ -239,3 +239,5 @@
     multiplierBonusBtn.addEventListener("click", ()=>{
         multiplierBonusClick();
     })
+
+    
