@@ -268,18 +268,9 @@ function timeOutfunc() {
     });
 
 
-<<<<<<< HEAD
     multiplierBonusBtn.addEventListener("click", () => {
     multiplierBonusClick();
      // jaune
 
 });
-=======
-    multiplierBonusBtn.addEventListener("click", ()=>{
-        multiplierBonusClick();
-        document.body.style.backgroundColor = 'rgb(255, 174, 0)';
-        for (let x in textTimer) {
-            textTimer[x].innerHTML = 'MULTI ACTIVATED';
-        }
-    });
->>>>>>> 7b1f5169d33b5e23818f59a8c021357f8aa72e02
+
