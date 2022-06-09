@@ -7,7 +7,6 @@
     var textTimer = document.querySelectorAll("#base");
     var btnIcons = document.querySelectorAll(".icon01");
     var bandTop = document.querySelectorAll("#band01");
-    
 
     var autoClickBonusText = document.getElementById("autoClickBonus");
     var autoClickBonusBtn = document.getElementById("bouton2");
@@ -28,7 +27,12 @@
     var multiplierBonusCost = 15;
     var boostBonusCost = 60;
     
-const delai = 1000;
+    const delai = 1000;
+
+    const blinkDelai = 2000;
+    const blinkSources = ["./img/smiley_svg.svg", "./img/smiley_svg_blink.svg"];
+    const blinkDuration = 100;
+
     var autoClickPerSecond = 0;
     var intervalAutoClick = null;
 
@@ -282,7 +286,20 @@ function timeOutfunc() {
         }
     }
 
+    function blink(){
+        console.log("blink");
+        changeIcone(clicker, blinkSources[1]);
+
+        setTimeout(() =>{
+            changeIcone(clicker, blinkSources[0]);
+        },blinkDuration);
+    }
+
     ///////////////////////////////////////////////////// Code //////////////////////////////////////////////////////
+
+    window.onload = function () {
+        setInterval(blink, blinkDelai);
+    };
 
     //Click
     clicker.addEventListener("click", (e)=>{
@@ -303,16 +320,13 @@ function timeOutfunc() {
 
     }); 
 
-
     autoClickBonusBtn.addEventListener("click", ()=>{
         autoclickBonusClick();
     });
     
-    
     boostBonusBtn.addEventListener("click", ()=>{
         boostBonusClick(); 
     });
-    
     
     multiplierBonusBtn.addEventListener("click", () => {
         multiplierBonusClick();
