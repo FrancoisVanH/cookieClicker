@@ -11,7 +11,7 @@
   - backend: Arianna, Anthony & Arnaud
   - project management : François & Arnaud
 
-## Projet's page.
+## Project's page.
 
    :point_right: [HERE](https://francoisvanh.github.io/cookieClicker/) :point_left:
    
