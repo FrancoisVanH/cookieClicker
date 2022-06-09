@@ -10,8 +10,12 @@
   - frontend: Timur & François
   - backend: Arianna, Anthony & Arnaud
   - project management : François & Arnaud
- 
- ## Mission objectives 
+
+## Projet's page.
+
+ [here](https://francoisvanh.github.io/cookieClicker/)
+
+## Mission objectives 
 
 At the end of this challenge we should have improved our:
 
