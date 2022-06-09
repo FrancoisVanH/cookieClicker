@@ -15,7 +15,7 @@
 
    :point_right: [here](https://francoisvanh.github.io/cookieClicker/) :point_left:
    
-### User manual
+## User manual
 
 ![Ajouter un titre](https://user-images.githubusercontent.com/104204619/172801830-570e63c7-cd97-4e94-be47-fb4c8074e7da.png)
 
