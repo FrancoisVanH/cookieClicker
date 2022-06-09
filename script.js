@@ -5,7 +5,7 @@
     var clickText = document.getElementById("clickText");
     var puntos = document.getElementById("totalText");
     var textTimer = document.querySelectorAll("#base");
-     var bandTop = document.querySelectorAll(".loop-holder__text");
+    var bandTop = document.querySelectorAll("#band01");
     
 
     var autoClickBonusBtn = document.getElementById("autoClickBonus");
@@ -113,7 +113,7 @@ const delai = 1000;
             counter -= autoClickBonusCost;
             updatePuntosText();
               document.body.style.backgroundColor = 'rgb(172, 73, 255)'; // mauve
-            for (let x in textTimer) {
+            for (let x in bandTop) {
             bandTop[x].innerHTML = 'AUTO CLICK ACTIVATED';
             }
 
@@ -219,9 +219,9 @@ function timeOutfunc() {
             updatePuntosText();
             multiplicateur();
              document.body.style.backgroundColor = 'rgb(255, 174, 0)'; // jaune
-            for (let x in textTimer) {
+            for (let x in bandTop) {
             bandTop[x].innerHTML = 'MULTI ACTIVATED';
-    }
+        }
 
             multiplierBonusCost = updateBonusCost(multiplierBonusCost, 1.5);
             updateBtnText(multiplierBonusBtn, "Multiplicator: " + Math.round(multiplierBonusCost * 100) / 100);
@@ -272,5 +272,4 @@ function timeOutfunc() {
     multiplierBonusClick();
      // jaune
 
-});
-
+    });
