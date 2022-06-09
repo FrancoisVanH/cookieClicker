@@ -253,4 +253,4 @@
         for (let x in textTimer) {
             textTimer[x].innerHTML = 'MULTI ACTIVATED';
         }
-    })
+    });
