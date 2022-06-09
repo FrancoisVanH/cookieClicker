@@ -143,7 +143,7 @@
     border: 2px solid #4D5259;
     box-shadow: 0px 7px 0 1px #000000;
     border-radius: 200px ;
-    padding-bottom: 5px; /* sa mere la pute ce truc */
+    padding-bottom: 10px; /* sa mere la pute ce truc */
   }
 
 
@@ -164,6 +164,7 @@
 
   .container-btn{
   font-size: 120%;
+  padding-bottom: 5px;
   }
 
   /* star CSS */
@@ -292,7 +293,7 @@
       padding:0px;
       position: relative;
       border-radius: 50%;
-      max-width: 50%;
+      max-width: 75%;
       }
       h1{
         margin-top: 15px;
@@ -321,14 +322,15 @@
       
       .contentContainer{
         display: flex;
-        padding-top: 3em;
+        padding-top: 0px;
+      
+
       }
       .contentContainer > * {
         flex: 1 1;
       }
       .container-btn-all {
-        padding-top: 12px;
-        margin-bottom: 0px;
+        padding-top: 2px;
         
       }
       .round01{
@@ -344,6 +346,10 @@
       position: fixed;
       bottom: 0;
       left: 0;
+      }
+
+      .leftContent{
+        margin-top: 1em;
       }
     }
   /*########################################################*/
@@ -454,7 +460,7 @@
       padding:0px;
       position: relative;
       border-radius: 50%;
-      max-width: 75%;
+      max-width: 100%;
       }
       h1{
         margin-top: 15px;
@@ -479,17 +485,21 @@
         color: white;
         font-family: "Smiley-Cookie";
       }
-      
+    .leftContent{
+      padding-top: 0px;
+    }
+
+
       
       .contentContainer{
         display: flex;
-        padding-top: 3em;
+        padding-top: 0.5em;
       }
       .contentContainer > * {
         flex: 1 1;
       }
       .container-btn-all {
-        padding-top: 12px;
+        padding-top: 2.7em;
         margin-bottom: 0px;
         
       }
