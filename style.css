@@ -14,10 +14,6 @@
   }
 
 
-  .double {
-    display: flex;
-    margin:0
-  }
   .banderolle{
     width: 100%;
     margin-top: 0px;
@@ -249,14 +245,6 @@
 
   /* timer */
 
-
-  .loop-holder_auto-click  {
-
-  }
-
-  .loop-holder__text_auto {
-
-  }
   .banderolle-bottom {
     position: fixed;
     bottom: 0;
