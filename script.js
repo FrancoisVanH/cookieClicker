@@ -7,6 +7,8 @@
     var textTimer = document.querySelectorAll("#base");
     var btnIcons = document.querySelectorAll(".icon01");
     var bandTop = document.querySelectorAll("#band01");
+    var colorBand = document.getElementById("colorBandBottom");
+    var borderBandTop = document.getElementById("gameInfo");
 
     var autoClickBonusText = document.getElementById("autoClickBonus");
     var autoClickBonusBtn = document.getElementById("bouton2");
@@ -164,7 +166,12 @@
             counter -= autoClickBonusCost;
             UpdateDisableStateBonusBtn();
             updatePuntosText();
-              document.body.style.backgroundColor = 'rgb(172, 73, 255)'; // mauve
+            if (boostActive == false) {
+                document.body.style.backgroundColor = 'rgb(172, 73, 255)'; // mauve
+
+            }
+          
+              
             for (let x in bandTop) {
             bandTop[x].innerHTML = 'AUTO CLICK ACTIVATED';
             }
@@ -199,6 +206,9 @@ function timeOutfunc() {
         for (let x in textTimer) {
             textTimer[x].innerHTML = "WELCOME to smiley clicker";
         }
+        colorBand.style.backgroundColor = 'rgb(189, 131, 255)' // mauve
+        puntos.style.backgroundColor = '#00CC1F';
+        borderBandTop.style.backgroundColor = '#00CC1F'// vert
     }
 }
     /**
@@ -220,7 +230,8 @@ function timeOutfunc() {
             }, 2000);
             
             //stop interval after 30s
-            if(now<=0){
+            if (now <= 0) {
+               
                 clearInterval(intervalBoost);
                 boostActive = false;
                 boost = 1;
@@ -241,7 +252,10 @@ function timeOutfunc() {
             counter -= boostBonusCost;
             UpdateDisableStateBonusBtn();
             updatePuntosText();
-            document.body.style.backgroundColor = 'rgb(255, 34, 0)';
+            puntos.style.backgroundColor = 'rgb(210,0,0)';
+            colorBand.style.backgroundColor = 'rgb(210,0,0)'; // banderole.rouge
+            document.body.style.backgroundColor = 'rgb(255, 34, 0)'; // rouge
+            borderBandTop.style.backgroundColor = 'rgb(210, 0, 0)'; // rouge
 
             
             now = 30;
@@ -272,7 +286,12 @@ function timeOutfunc() {
             UpdateDisableStateBonusBtn();
             updatePuntosText();
             multiplicateur();
-             document.body.style.backgroundColor = 'rgb(255, 174, 0)'; // jaune
+            if (boostActive == false) {
+                document.body.style.backgroundColor = 'rgb(255, 174, 0)'; // jaune
+
+            }
+            
+             
             for (let x in bandTop) {
             bandTop[x].innerHTML = 'MULTI ACTIVATED';
         }
@@ -287,7 +306,6 @@ function timeOutfunc() {
     }
 
     function blink(){
-        console.log("blink");
         changeIcone(clicker, blinkSources[1]);
 
         setTimeout(() =>{
