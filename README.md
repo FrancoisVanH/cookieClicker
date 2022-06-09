@@ -13,7 +13,7 @@
 
 ## Projet's page.
 
- [here](https://francoisvanh.github.io/cookieClicker/)
+ :point_right: [here](https://francoisvanh.github.io/cookieClicker/) :point_left:
 
 ## Mission objectives 
 
