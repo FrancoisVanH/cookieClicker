@@ -104,9 +104,15 @@
 
 
   /* button du shop */
-
-
-
+  /* #bouton1:disabled{
+    background-color: #00CC1F;
+  }
+  #bouton2:disabled{
+    background-color: #00CC1F;
+  }
+  #bouton3:disabled{
+    background-color: #00CC1F;
+  } */
     
 
   h4 {
@@ -137,14 +143,14 @@
     border: 2px solid #4D5259;
     box-shadow: 0px 7px 0 1px #000000;
     border-radius: 200px ;
-    padding-bottom: 10px; /* sa mere la pute ce truc */
+    padding-bottom: 5px; /* sa mere la pute ce truc */
   }
 
 
   /* button flex*/
   .img-col{
     padding-top: 15px; /* sa mere la pute ce truc */
-  padding-left: 5px;
+    padding-left: 5px;
 
   }
 
@@ -186,29 +192,6 @@
       background: #d3d3d3;
     }
     /* buttons du shop */
-    
-    .settings {
-      font-size: 2px;
-      color: #4D5259;
-      line-height: 1.5;
-      font-weight: bold;
-      padding: .5em 2em;
-      background: #FFFFFF;
-      border: 2px solid #4D5259;
-      box-shadow: 4px 4px 0 0 #000000;
-      outline:0;
-    }
-    
-    .settings:active {
-      transform: translateY(4px) translateX(4px);
-      box-shadow: 0px 0px 0 0 #4D5259;
-    }
-    .settings:hover {
-      background: #d3d3d3;
-    }
-
-
-
 
     .loop-holder {
       display: flex;
