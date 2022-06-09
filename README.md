@@ -13,7 +13,7 @@
 
 ## Projet's page.
 
-   :point_right: [here](https://francoisvanh.github.io/cookieClicker/) :point_left:
+   :point_right: [HERE](https://francoisvanh.github.io/cookieClicker/) :point_left:
    
 ## User manual
 
