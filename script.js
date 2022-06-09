@@ -114,6 +114,9 @@
             //Stop previous interval and increase the bonus per second
             if(intervalAutoClick != null){
                 clearInterval(intervalAutoClick);
+                for (let x in textTimer) {
+                    textTimer[x].innerHTML = 'WELCOME TO SMILEY CLICKER';
+            }
             }
 
             autoClickPerSecond++;
@@ -138,10 +141,11 @@
 
             updatePuntosText();
             now--;
+            document.body.style.backgroundColor = 'rgb(255, 34, 0)';
 
             //Change text timer
             for(let x in textTimer){
-                textTimer[x].innerHTML = "00:"+now.toString().padStart(2,"0");
+                textTimer[x].innerHTML = "FENZZZY MODE 00:"+now.toString().padStart(2,"0");
             }
          
             //stop interval after 30s
@@ -152,7 +156,7 @@
                 for(let x in textTimer){
                     textTimer[x].innerHTML = "WELCOME to smiley clicker";
                 }
-
+                document.body.style.backgroundColor = 'rgb(255, 255, 255)';
                 updateClickText();
             }
             
@@ -173,6 +177,7 @@
             //change boostActive on
             boostActive = true;
             boost = 2;
+        
             
             updateClickText();
 
@@ -222,20 +227,30 @@
         setTimeout(() => {
             actionClicker.style.display = 'none';
         }, 600);
+
     }); 
 
 
     autoClickBonusBtn.addEventListener("click", ()=>{
         autoclickBonusClick();
+        document.body.style.backgroundColor = 'rgb(172, 73, 255)';
+        for (let x in textTimer) {
+            textTimer[x].innerHTML = 'AUTO CLICK ACTIVATED';
+        }
+        
     });
 
 
     boostBonusBtn.addEventListener("click", ()=>{
-        boostBonusClick();
+        boostBonusClick();    
      
     });
 
 
     multiplierBonusBtn.addEventListener("click", ()=>{
         multiplierBonusClick();
+        document.body.style.backgroundColor = 'rgb(255, 174, 0)';
+        for (let x in textTimer) {
+            textTimer[x].innerHTML = 'MULTI ACTIVATED';
+        }
     })
