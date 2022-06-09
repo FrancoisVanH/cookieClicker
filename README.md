@@ -3,10 +3,10 @@
 - Repository: `cookieClicker`
 - Type of Challenge: `Consolidation`
 - Duration: `4 days`
-- Deadline: `28/11/21 17PM`
+- Deadline: `09/06/22 17PM`
 - Deployment strategy :
   - Github page
-- Team challenge : In group of three
+- Team challenge : In group of five
   - frontend: Timur & François
   - backend: Arianna, Anthony & Arnaud
   - project management : François & Arnaud
