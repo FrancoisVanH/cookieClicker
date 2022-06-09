@@ -70,13 +70,17 @@
   .IMG-SPACE{
   display: block;
   margin: 0 auto;
-  margin-top: 5px;
-  margin-bottom: 0px;
+  margin-bottom:0.5vh;
   text-align: center;
   padding:0px;
   position: relative;
   border-radius: 50%;
+  }
 
+  .leftContent{
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    padding-top:0px;
   }
   /* container de l'image - gere l'espace */
 
@@ -86,7 +90,7 @@
   box-shadow: 0px 8px 0 0 #000000;
   transition: ease all 1ms;
   border-radius: 50%;  
-  max-width: 70%;
+  width: 275px;
   background-color: #000000;
   }
 
@@ -115,15 +119,17 @@
     text-align: center;
     font-family: "Grotesk";
     margin-bottom: 10px;
-    margin-top: 10px;
+    margin-top: 5px;
   } /* only for iphone 12pro */
 
 
 
   /* button flex*/
-  .container-btn-all{
-    margin-bottom:2.1em;
-  }
+   .container-btn-all {
+          padding-top: 0vh;
+          margin-bottom: 10vh;
+          
+        }
 
   .round01{
     font-family: "Grotesk";
@@ -162,7 +168,10 @@
   font-size: 120%;
   padding-bottom: 5px;
   }
+.contentContainer{
+  padding-top: 0px;
 
+}
   /* star CSS */
   #img-action
   {
@@ -203,8 +212,9 @@
         font-size: 10vw;
         text-indent: .55em;
         align-self: auto;
-        padding-top: 12px;
-        padding-bottom: 1px;
+        padding-top:0.5vh;
+        margin-top: 1vh;
+        padding-bottom: 0.5vh;
         color: white;
         font-family: "Smiley-Cookie";
     }
@@ -227,7 +237,7 @@
   display: flex;
   white-space: nowrap;
   overflow: hidden;
-  background-color: #BD83FF; 
+  background-color: #BD83FF;
     }
 
   .loop-holder__text_fenzy {
@@ -237,7 +247,7 @@
         font-size:8vh;
         text-indent: .55em;
         align-self: auto;
-        padding-top:16px;
+        padding-top:2vh;
         padding-bottom:0;
         color: white;
         font-family: "Smiley-Cookie";
@@ -280,16 +290,20 @@
       text-align: center;
       padding:0px;
       position: relative;
+      padding-top: 7vh;
       border-radius: 50%;
-      max-width: 75%;
+      width: 500px;
+      }
+      .gameInfo{
+      height: 200px;
       }
       h1{
-        margin-top: 15px;
+       margin-top: 29px;
         margin-bottom: 0px;
         max-width: 100%;
         text-align: center;
         font-family: "Smiley-Cookie";
-        font-size: 3em;
+        font-size: 10em;
         background-color: #00CC1F;
         width: 100%;
         color: white;
@@ -301,7 +315,7 @@
         font-size: 5vw;
         text-indent: .55em;
         align-self: auto;
-        padding-top: 12px;
+        padding-top: 14px;
         padding-bottom: 1px;
         color: white;
         font-family: "Smiley-Cookie";
@@ -318,8 +332,8 @@
         flex: 1 1;
       }
       .container-btn-all {
-        padding-top: 2px;
-        
+        padding-top: 13vh;
+        margin-bottom: 0px;
       }
       .round01{
         margin-bottom: 3em;
@@ -335,9 +349,20 @@
       bottom: 0;
       left: 0;
       }
-
+   .loop-holder__text_fenzy {
+            display: flex;
+            height: 74px;
+            animation: textLoop 10s linear infinite;
+            font-size:7vh;
+            text-indent: .55em;
+            align-self: auto;
+            padding-top:15px;
+            padding-bottom:5px;
+            color: white;
+            font-family: "Smiley-Cookie";
+      }
       .leftContent{
-        margin-top: 1em;
+        margin-top: 7vh;
       }
     }
   /*########################################################*/
@@ -350,8 +375,9 @@
       padding:0px;
       position: relative;
       border-radius: 50%;
-      max-width: 50%;
-      padding-top: 7vh;
+      width: 400px;
+      padding-top: 2vh;
+      padding-bottom: 0.5vh;
       }
       .banderolle{
         width: 100%;
@@ -436,31 +462,47 @@
         .loop-holder__text{
           font-size:8vh;
         }
+        
   }
   /*########################################################*/
   @media screen and (min-width:1280px) {
+    
+    .img-click{
+      margin-top: auto;
+      
+    }
     .IMG-SPACE{
       display: block;
       margin: 0 auto;
-      margin-top: 5px;
-      margin-bottom: 0px;
+      margin-bottom: 3vh;
       text-align: center;
       padding:0px;
       position: relative;
-      border-radius: 50%;
-      max-width: 75%;
+      width: 600px;
+    height: auto;
       }
+
+
+      .gameInfo{
+      height: 200px;
+      }
+
+
       h1{
-        margin-top: 15px;
+        margin-top: 30px;
         margin-bottom: 0px;
         max-width: 100%;
         text-align: center;
         font-family: "Smiley-Cookie";
-        font-size: 3em;
+        font-size: 10em;
         background-color: #00CC1F;
         width: 100%;
         color: white;
         
+      }
+
+      .loop-holder_base{
+        max-height: 11vh;
       }
       .loop-holder__text {
         display: flex;
@@ -468,26 +510,30 @@
         font-size: 5vw;
         text-indent: .55em;
         align-self: auto;
-        padding-top: 12px;
+        padding-top: 19px;
         padding-bottom: 1px;
         color: white;
         font-family: "Smiley-Cookie";
       }
     .leftContent{
-      padding-top: 0px;
+      padding-top: 13vh;
+      padding-bottom: 3vh;
+
+
+
     }
 
 
       
       .contentContainer{
         display: flex;
-        padding-top: 0.5em;
+        padding-top: 0.1em;
       }
       .contentContainer > * {
         flex: 1 1;
       }
       .container-btn-all {
-        padding-top: 2.7em;
+        padding-top: 9vh;
         margin-bottom: 0px;
         
       }
@@ -521,7 +567,7 @@
             font-size:10vh;
             text-indent: .55em;
             align-self: auto;
-            padding-top:16px;
+            padding-top:13px;
             padding-bottom:0;
             color: white;
             font-family: "Smiley-Cookie";
@@ -530,6 +576,7 @@
         margin-bottom: 4.5em;
         size: 150%;
       }
+
     }    /*########################################################*/
   @media screen and (max-width:375px) {
     .IMG-SPACE{
@@ -540,8 +587,9 @@
       padding:0px;
       position: relative;
       border-radius: 50%;
-      max-width: 50%;
-      padding-top: 1vh;
+      width: 300px;
+      padding-top: 0vh;
+      padding-bottom: 0.5vh;
       }
       h1{
         margin-top: 15px;
